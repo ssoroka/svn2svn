@@ -1,0 +1,28 @@
+I pretty much just stole this from:
+
+http://blog.choonkeat.com/weblog/2006/05/svn2svn.html
+
+and put it here so I could make changes to it and share it easily.
+
+Original file header:
+
+# 
+# svn2svn
+# 
+# Replicates changesets from one SVN repository to another, includes diffs 
+# and comments of each revision, but
+# - Excludes svn property changes
+# - Excludes revisions without file modifications (e.g. new directory)
+#
+# Since each revision of the source repository is checked out as r{\d+} sub 
+# directories, the whole process may take hours, depending on connectivity.
+#
+# Works on unix only, with 'svn' and 'svnadmin' commandline tools. Written 
+# and used on Ubuntu 5.10. Provided as-is and absolutely no warranty - aka 
+# Don't bet your life on it
+# 
+# License: same as Subversion 
+# http://subversion.tigris.org/project_license.html
+#
+# version 0.1; 14 May 2006; choonkeat at gmail dot com
+#
