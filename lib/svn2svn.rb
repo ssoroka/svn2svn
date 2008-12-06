@@ -85,7 +85,7 @@ class Svn2Svn
 
   def patch_commit(older, newer, dest, comments)
     puts "#{older} > #{newer}"
-    system "diff -Naur -x '\.svn' #{older} #{newer} | patch -p1 -d #{dest}"
+    system "diff -Naur -x '\.(svn|git)' #{older} #{newer} | patch -p1 -d #{dest}"
     svn "status #{dest}" do |f|
       f.read.split(/\n/).each do |line|
         if line =~ /^\?\s+(.+)$/
